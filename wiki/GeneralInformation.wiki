@@ -49,3 +49,6 @@ Then inside of this directory should be the original video file.  A basic struct
 
 Spaces should work in light of the underscores (_).  This uses ffmpeg and !AtomicParsely to do the backend encoding and tagging.
  
+To run the script (assuming all other programs are installed correctly):
+
+_~/!The_Office-1x01-!Pilot_Episode$ tv-to-iphone.sh office-pilot-episode.avi_
