@@ -2,6 +2,8 @@
 
 = Introduction =
 
+This project creates scripts that will re-encode videos from xvid (or anything ffmpeg recognizes) to h264 encoded videos from the Linux command line that are able to play on the PSP or the iPhone.  Here is how the project came to be:
+
 I am a gadget geek.  I have all kinds of different gadgets, but a couple of my favorite ones lately have been the PSP and the iPhone.  I've really enjoyed messing around with these.
 
 I am also into videos, all types of videos.  These videos include DVD movies, movies in xvid/dvix format, tv shows and all other things that I can watch on my computer.
@@ -19,8 +21,31 @@ My scripts that I have written are very simple. I use ffmpeg on the back end, I 
 
 I do plan on updating the scripts as I can.  Here is a rundown on the different components and scripts:
 
-BackEndApps
+BackEndApps - This page talks about ffmpeg, !AtomicParsley, and other apps that I use
 
 
+Currently, all of my scripts have some variables at the top of them that can be changed.  Things like "*THREADS*" and "*QUALITY*".  
 
+The *THREADS* variable will let the user tell ffmpeg how many threads to use.  In the future, making this a switch would make sense, and base the default number of threads on the number of CPUS's (or virtual CPU's) a system has.
+
+The *QUALITY* variable dictates the bitrate that ffmpeg will encode to.  This is, of course, directly related to the size of the mp4 that is being created.  I have found that it is possible to create a watchable 20 minute TV show at about 250k that takes up between 35-40MB of disk space.  ffmpeg doesn't reduce it much more than about 200k, and I wouldn't go over 1000k because I don't believe the quality trade-off is worth the size increase.
+
+
+==Scripts==
+
+===iPhone===
+
+====tv-to-iphone.sh====
+This is the script I've been writing and maintaining lately.  This script takes video file  as the command line argument, and will then convert it over.  I pull the TV show information (show name, season, episode, episode title) from the parent directory, and the format has to be how I have it set up.  I've thought of different ways to get this information and have decided this one works.  I am thinking about writing a quick script that will go out to the Internet and grab a TV show and season, and then create the directories in the correct format.
+
+The format of the parent directory should be:
+
+The_Office-1x01-Pilot_Episode
+
+Then inside of this directory should be the original video file.  A basic structure would look like this:
+
+The_Office-1x01-Pilot_Episode
+  \office-pilot-episode.avi
+
+Spaces should work in light of the underscores (_).  This uses ffmpeg and !AtomicParsely to do the backend encoding and tagging.
  
