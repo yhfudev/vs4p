@@ -40,11 +40,11 @@ This is the script I've been writing and maintaining lately.  This script takes 
 
 The format of the parent directory should be:
 
-!The_Office-1x01-Pilot_Episode
+!The_Office-1x01-!Pilot_Episode
 
 Then inside of this directory should be the original video file.  A basic structure would look like this:
 
-!The_Office-1x01-Pilot_Episode
+!The_Office-1x01-!Pilot_Episode
   \office-pilot-episode.avi
 
 Spaces should work in light of the underscores (_).  This uses ffmpeg and !AtomicParsely to do the backend encoding and tagging.
