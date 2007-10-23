@@ -15,7 +15,12 @@ I know there are many programs out there that will convert videos to the iPhone 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+My scripts that I have written are very simple. I use ffmpeg on the back end, I use AtomicParsley to write the mp4 tags (for iPhone tags, PSP doesn't really use tags as much), and I use mplayer to convert my DVD ISO files into a raw stream that ffmpeg can use.  I am always looking for better ways to optimize these scripts, and I am always open to new ideas on how to do things.
+
+I do plan on updating the scripts as I can.  Here is a rundown on the different components and scripts:
+
+BackEndApps
+
+
+
+ 
