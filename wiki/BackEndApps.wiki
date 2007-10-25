@@ -23,8 +23,7 @@ This setup does require quite a few dependencies, but most are available if you 
 ==!AtomicParsley==
 
 [http://atomicparsley.sourceforge.net/ AtomicParsley home page]
+
 !AtomicParsley is a very nice little program that creates metadata for mp4 files.  This meta data is used by iTunes and by the iPhone.  I try to set the correct meta data using !AtomicParsley.
-
-
 
 
