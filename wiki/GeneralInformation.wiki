@@ -30,13 +30,25 @@ mp4 files have the option to set quite a bit of meta data.  I have thought about
 What I have decided to do is to use the parent directory of where the video file resides.  So, when I rip DVD's from my collection, I will put the ripped video file into a directory with the name of the show.  For example:
 
 {{{
-$ ls -R
-Transformers
-[mwoodson@bison:/fun/new/Movies]$ ls -R Transformers/
+$ ls -R Transformers/
 Transformers/:
 transformers.avi
 }}}
-In this example, 
+
+In this example, the directory name "Transformers" is going to be set as the title in the metadata of the mp4.
+
+TV Shows also use the parent directory, but becuase there is more information needed for a TV show (show name, season, episode number, show title), I use the format like:
+
+TV_Show-3x10-Title_of_TV_Show
+
+In this example:
+  *"TV Show" would be set as the name of the show
+  *"3" would be set as the season number
+  *"10" would be set as the episode number
+  *"Title Of TV Show" would be set as the episode name
+
+I have written a script to generate directories with this format.  More info can be found on the ToolPage.
+
 
 ==Options and Variables==
 
