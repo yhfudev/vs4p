@@ -35,6 +35,12 @@ The *QUALITY* variable dictates the bitrate that ffmpeg will encode to.  This is
 
 ===iPhone===
 
+IphoneScripts
+
+
+PspScripts
+
+ToolPage
 ====tv-to-iphone.sh====
 This is the script I've been writing and maintaining lately.  This script takes video file  as the command line argument, and will then convert it over.  I pull the TV show information (show name, season, episode, episode title) from the parent directory, and the format has to be how I have it set up.  I've thought of different ways to get this information and have decided this one works.  I am thinking about writing a quick script that will go out to the Internet and grab a TV show and season, and then create the directories in the correct format.
 
