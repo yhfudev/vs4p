@@ -23,6 +23,22 @@ I do plan on updating the scripts as I can.  Here is a rundown on the different 
 
 BackEndApps - This page talks about ffmpeg, !AtomicParsley, and other apps that I use
 
+==Setting Meta Data==
+
+mp4 files have the option to set quite a bit of meta data.  I have thought about where the best way to get this meta data from.  I thought about nfo files, but have found there is no consistent way to get information from these files.  I have thought about file name, and again, just no consistent way.
+
+What I have decided to do is to use the parent directory of where the video file resides.  So, when I rip DVD's from my collection, I will put the ripped video file into a directory with the name of the show.  For example:
+
+{{{
+$ ls -R
+Transformers
+[mwoodson@bison:/fun/new/Movies]$ ls -R Transformers/
+Transformers/:
+transformers.avi
+}}}
+In this example, 
+
+==Options and Variables==
 
 Currently, all of my scripts have some variables at the top of them that can be changed.  Things like "*THREADS*" and "*QUALITY*".  
 
