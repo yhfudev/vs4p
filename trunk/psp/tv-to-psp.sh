@@ -16,7 +16,6 @@ then
    echo 'This has probably already been converted!'
    exit 1
 fi
-#cat $1 | ffmpeg -y -i - -acodec aac -ab 128 -vcodec h264 -b 1200 -ar 48000  -coder 1 -aic 2 -bufsize 128 -g 250 -s 480x272 -r 29.97 -ac 2 -title $TITLE -f psp $NAME.MP4
 ffmpeg -threads 4 -y -i "$1" -title $TITLE -vcodec libx264 -coder 1 -bufsize 128 -g 250 -s 480x272 -r 29.97 -b 512k -pass 1 -f psp $NAME.MP4
 ffmpeg -threads 4 -y -i "$1" -title $TITLE -vcodec libx264 -coder 1 -bufsize 128 -g 250 -s 480x272 -r 29.97 -b 512k -pass 2 -acodec libfaac -ac 2 -ar 48000 -ab 128 -vol 384 -f psp $NAME.MP4
 #Picture
