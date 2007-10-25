@@ -33,28 +33,8 @@ The *QUALITY* variable dictates the bitrate that ffmpeg will encode to.  This is
 
 ==Scripts==
 
-===iPhone===
+IphoneScripts  -- Information page about the iPhone scripts
 
-IphoneScripts
+PspScripts -- Information page about the PSP Scripts
 
-
-PspScripts
-
-ToolPage
-====tv-to-iphone.sh====
-This is the script I've been writing and maintaining lately.  This script takes video file  as the command line argument, and will then convert it over.  I pull the TV show information (show name, season, episode, episode title) from the parent directory, and the format has to be how I have it set up.  I've thought of different ways to get this information and have decided this one works.  I am thinking about writing a quick script that will go out to the Internet and grab a TV show and season, and then create the directories in the correct format.
-
-The format of the parent directory should be:
-
-!The_Office-1x01-!Pilot_Episode
-
-Then inside of this directory should be the original video file.  A basic structure would look like this:
-
-!The_Office-1x01-!Pilot_Episode
-  \office-pilot-episode.avi
-
-Spaces should work in light of the underscores (_).  This uses ffmpeg and !AtomicParsely to do the backend encoding and tagging.
- 
-To run the script (assuming all other programs are installed correctly):
-
-_~/!The_Office-1x01-!Pilot_Episode$ tv-to-iphone.sh office-pilot-episode.avi_
+ToolPage -- Information about some of the tools that come in handy
