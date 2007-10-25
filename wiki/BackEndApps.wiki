@@ -1,0 +1,30 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+This page describes the apps that I use on the backend of the script.  Make sure that these programs are in your PATH.
+
+= Details =
+
+==ffmpeg==
+
+I use ffmpeg to do all of the "heavy-lifting," or video converting.   The key is to have lib264 compiled into ffmpeg.
+
+I used Ubuntu, Debian, and Suse, and I have only found decent packages for Debian. (These are found on the three-dimensional.net web site.  Google search will probably come up with them).  On Ubuntu,  I have followed various links in the Ubuntu forums to get them to work properly.  
+
+[http://ubuntuforums.org/showthread.php?p=1850156 Compile on Ubuntu]
+
+When I have had to compiled ffmpeg myself, I use the following parameters
+
+_  configuration: --prefix=/usr/local --libdir=${prefix}/lib --shlibdir=${prefix}/lib --incdir=${prefix}/include/ffmpeg --enable-shared --enable-libmp3lame --enable-gpl --enable-libfaad --mandir=${prefix}/share/man --enable-libvorbis --enable-pthreads --enable-libfaac --enable-libxvid --enable-pp --enable-libamr-nb --enable-libamr-wb --enable-x11grab --enable-libogg --enable-libgsm --enable-libx264 --enable-liba52 --enable-libtheora --extra-cflags="-Wall -g -fPIC -DPIC" --enable-swscaler
+
+This setup does require quite a few dependencies, but most are available if you look around for them.
+
+==!AtomicParsley==
+
+[http://atomicparsley.sourceforge.net/ AtomicParsley home page]
+!AtomicParsley is a very nice little program that creates metadata for mp4 files.  This meta data is used by iTunes and by the iPhone.  I try to set the correct meta data using !AtomicParsley.
+
+
+
+
