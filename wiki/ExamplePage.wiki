@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Show examples of vs4p
 
 = Introduction =
 
@@ -14,6 +14,14 @@ To convert a avi format (xvid/dvix) of a movie into an mp4:
 ~]$ cd Transformers
 ~/Transformers]$ video-to-iphone.sh transformers.avi
 }}}
+
+To convert a avi format (xvid/dvix) of a movie into an mp4 with a higher bitrate:
+
+{{{
+~]$ cd Transformers
+~/Transformers]$ video-to-iphone.sh -b 768k transformers.avi
+}}}
+
 
 To convert a avi format (xvid/dvix) of a TV show into an mp4:
 
