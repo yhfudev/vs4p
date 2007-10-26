@@ -6,7 +6,7 @@ if [ $# -lt 1 ]; then
    exit 1
 fi
 
-while getopts "b:t#h" flag
+while getopts "b:t:h" flag
 do
    case $flag in
       b )
