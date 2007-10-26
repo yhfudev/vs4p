@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary iPhone script pages
 
 = Introduction to iPhone Scripts =
 
