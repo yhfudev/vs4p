@@ -1,4 +1,4 @@
-#summary iPhone script pages
+#summary iPhone script details
 
 = Introduction to iPhone Scripts =
 
