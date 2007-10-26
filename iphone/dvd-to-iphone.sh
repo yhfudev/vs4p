@@ -56,20 +56,20 @@ mplayer -v dvd:// -dvd-device $1 > dvdout.tmp 2>/dev/null
 grep  "^audio stream:.*language: en" dvdout.tmp
 NUMAUD=$(grep "^number of audio channels on disk:" dvdout.tmp| tr -d .| awk -F : '{print $2}')
 echo "Number of Audio Tracks on DVD: $NUMAUD"
-if [ $NUMAUD -eq 0 ]
+if [ "$NUMAUD" -eq 0 ]
 then
    echo "No Audio Tracks Found.  Please Investigate..."
    rm -f dvdout.tmp
    exit 1
 fi
-if [ $NUMAUD -eq 1 ]
+if [ "$NUMAUD" -eq 1 ]
 then
    echo "Only one audio track, gonna use it"
    rm -f dvdout.tmp
 else
    #count how many English languages there are
    NUMENAUD=$(grep -c "^audio stream:.*language: en" dvdout.tmp)
-   if [ $NUMENAUD -eq 1 ]
+   if [ "$NUMENAUD" -eq 1 ]
    then
       echo "Only one English audio track, gonna use it"
       ENAUDIO=$(grep "^audio stream:.*language: en" dvdout.tmp | awk '{print $3}')
@@ -81,12 +81,12 @@ else
       FIVEONESTREAM=$(grep "^audio stream:.*5.1.*language: en" dvdout.tmp | awk '{print $3}')
       
       
-      if [ -n $STEREOSTREAM ]
+      if [ -n "$STEREOSTREAM" ]
       then
          echo "Stereo Found.  Will use stereo"
          NENAUDIO=$(expr $STEREOSTREAM + 1)
          MAPSWITCH="-map 0.0:0.0 -map 0.${NENAUDIO}:0.1"
-      elif [ -z $FIVEONESTREAM ]
+      elif [ -z "$FIVEONESTREAM" ]
       then
          echo "No 5.1 sound found.  Please investigate:"
          grep  "^audio stream:.*language: en" dvdout.tmp
