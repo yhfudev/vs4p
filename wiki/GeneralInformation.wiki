@@ -52,6 +52,8 @@ I have written a script to generate directories with this format.  More info can
 
 ==Options and Variables==
 
+The Scripts all do a 2 pass encoding with ffmpeg.
+
 Currently, all of my scripts have some variables at the top of them that can be changed.  Things like "*THREADS*" and "*QUALITY*".  
 
 The *THREADS* variable will let the user tell ffmpeg how many threads to use.  In the future, making this a switch would make sense, and base the default number of threads on the number of CPUS's (or virtual CPU's) a system has.
