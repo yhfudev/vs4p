@@ -1,4 +1,4 @@
-#summary General Overview of *vs4p*
+#summary General Overview of vs4p
 = Introduction =
 
 This project creates scripts that will re-encode videos from xvid (or anything ffmpeg recognizes) to h264 encoded videos from the Linux command line that are able to play on the PSP or the iPhone.  Here is how the project came to be:
