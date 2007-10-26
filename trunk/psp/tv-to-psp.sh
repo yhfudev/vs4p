@@ -35,6 +35,7 @@ do
          exit 1
       ;;
    esac
+   shift $(($OPTIND - 1))
 done
 
 if [ -z "$BITRATE" ] 
