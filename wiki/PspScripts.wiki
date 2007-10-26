@@ -1,5 +1,4 @@
-#summary One-sentence summary of this page.
-
+#summary PSP Script Details
 = Introduction to PSP Scripts =
 
 Here is some information about of the scripts related to the PSP.  The naming of the PSP files is a bit different than other files.  PSP's require that the name is in the form:
