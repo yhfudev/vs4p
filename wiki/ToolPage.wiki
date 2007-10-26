@@ -1,5 +1,4 @@
-#summary One-sentence summary of this page.
-
+#summary Details of various scripts included in vs4p
 = Introduction to some tools =
 
 These are some tools to help with converting videos.
