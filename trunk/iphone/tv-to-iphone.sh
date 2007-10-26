@@ -1,11 +1,11 @@
 #!/bin/sh
 
-if [ $# -ne 1 ]; then
+if [ $# -lt 1 ]; then
    echo "usage: $(basename $0) <videofile>"
    exit 1
 fi
 
-while getopts "b:t:h" flag
+while getopts "b:t#h" flag
 do
    case $flag in
       b )
