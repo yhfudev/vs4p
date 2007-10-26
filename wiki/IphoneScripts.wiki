@@ -34,4 +34,4 @@ The only difference between video-to-iphone.sh and tv-to-iphone.sh is that !Atom
 
 ==dvd-to-iphone.sh==
 
-This script takes a DVD iso/img file as an argument and attempts to convert it into a video watchable on the iPhone.  I use mplayer to rip the video out, of the DVD, and then use ffmpeg to convert it from the ripped source into the mp4.  mplayer has shown issues here and does not always rip the DVD stream from the DVD image file.  It tries to locate a stereo track on the DVD (as opposed to 5.1.)  I've had about 85% success rate with this script.  It's still a work in progress.
+This script takes a DVD iso/img file as an argument and attempts to convert it into a video watchable on the iPhone.  I use mplayer to dump the video out, of the DVD, and then use ffmpeg to convert it from the ripped source into the mp4.  mplayer has shown issues here and does not always dump the DVD stream from the DVD image file.  It tries to locate a stereo track on the DVD (as opposed to 5.1.)  I've had about 85% success rate with this script.  It's still a work in progress.
