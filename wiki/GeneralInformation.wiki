@@ -55,11 +55,11 @@ The Scripts all do a 2 pass encoding with ffmpeg.
 
 Currently, all of my scripts have some command line options that can be used.  A list is here:
 
-  *-t # of threads ffmpeg should use.  This will speed up ffmpeg on mulit core cpu's
+  * -t -- number of threads ffmpeg should use.  This will speed up ffmpeg on mulit core cpu systems.
 
 If the threads aren't specified, the scripts will attempt to guess how many cpus the computer has, both virtual and physical (read /proc/cpuinfo) and then insert that number of threads into the program.
 
-  *-b -- bitrate the mp4 will be encoded in. *NOTE: The "k" is needed!*
+  * -b -- bitrate the mp4 will be encoded in. *NOTE: The "k" is needed!*
 This is, of course, directly related to the size of the mp4 that is being created.  I have found that it is possible to create a watchable 20 minute TV show at about 250k that takes up between 35-40MB of disk space.  ffmpeg doesn't reduce it much more than about 200k, and I wouldn't go over 1000k because I don't believe the quality trade-off is worth the size increase.  The default for TV is set at 300k, for video 400k, and dvd is 500k.
 
 
