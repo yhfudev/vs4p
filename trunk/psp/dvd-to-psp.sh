@@ -53,7 +53,7 @@ NUM1=$(echo $MOVIE | tr "A-Z" "a-z" | awk -F - '{print $1}' | md5sum| tr -d a-z 
 NAME=MAQ${NUM1}
 
 ###################### Get DVD AUDIO Stream for PSP################################################
-mplayer -v dvd:// -dvd-device $1 > dvdout.tmp 2>/dev/null
+mplayer -v dvd:// -dvd-device "$1" > dvdout.tmp 2>/dev/null
 #Get number of audio tracks
 grep  "^audio stream:.*language: en" dvdout.tmp
 NUMAUD=$(grep "^number of audio channels on disk:" dvdout.tmp| tr -d .| awk -F : '{print $2}')
@@ -111,11 +111,11 @@ then
    echo 'This has probably already been converted!'
    exit 1
 fi
-mplayer dvd:// -dumpstream -dvd-device $1
+mplayer dvd:// -dumpstream -dvd-device "$1"
 #Pass 1
-ffmpeg -threads $THREADS -y -i "$1" -title $TITLE -vcodec libx264 -coder 1 -bufsize 128 -g 250 -s 480x272 -r 29.97 -b $BITRATE -pass 1 -f psp $NAME.MP4
+ffmpeg -threads $THREADS -y -i stream.dump -title $TITLE -vcodec libx264 -coder 1 -bufsize 128 -g 250 -s 480x272 -r 29.97 -b $BITRATE -pass 1 -f psp $NAME.MP4
 #Pass 2
-ffmpeg -threads $THREADS -y -i "$1" -title $TITLE -vcodec libx264 -coder 1 -bufsize 128 -g 250 -s 480x272 -r 29.97 -b $BITRATE -pass 2 -acodec libfaac -ac 2 -ar 48000 -ab 128 -vol 384 -f psp $NAME.MP4
+ffmpeg -threads $THREADS -y -i stream.dump -title $TITLE -vcodec libx264 -coder 1 -bufsize 128 -g 250 -s 480x272 -r 29.97 -b $BITRATE -pass 2 -acodec libfaac -ac 2 -ar 48000 -ab 128 -vol 384 -f psp $NAME.MP4
 if [ $? -eq 0 ]
 then
    #Picture

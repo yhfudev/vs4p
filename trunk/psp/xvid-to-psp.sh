@@ -67,7 +67,7 @@ ffmpeg -threads $THREADS -y -i "$1" -title $TITLE -vcodec libx264 -coder 1 -bufs
 if [ $? -eq 0 ]
 then
    #Picture
-   cat $1 | ffmpeg -y -i - -f image2 -ss 30 -vframes 1 -s 160x120 -an $NAME.THM
+   ffmpeg -y -i "$1" -f image2 -ss 30 -vframes 1 -s 160x120 -an $NAME.THM
    touch .CONVERTED-TO-PSP
 fi
 rm -f *log
