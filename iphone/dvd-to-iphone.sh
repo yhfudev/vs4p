@@ -51,7 +51,7 @@ fi
 TITLE=$(echo $PWD |awk -F/ '{print $(NF)}')
 
 ###################### Get DVD AUDIO Stream for iPhone################################################
-mplayer -v dvd:// -dvd-device $1 > dvdout.tmp 2>/dev/null
+mplayer -v dvd:// -dvd-device "$1" > dvdout.tmp 2>/dev/null
 #Get number of audio tracks
 grep  "^audio stream:.*language: en" dvdout.tmp
 NUMAUD=$(grep "^number of audio channels on disk:" dvdout.tmp| tr -d .| awk -F : '{print $2}')
@@ -109,7 +109,7 @@ then
    exit 1
 fi
 #dump dvd stream from ISO
-mplayer dvd:// -dumpstream -dvd-device $1
+mplayer dvd:// -dumpstream -dvd-device "$1"
 #Pass 1
 ffmpeg -threads $THREADS -y -i stream.dump -s 480x272 -vcodec libx264 -b $BITRATE -flags +loop -cmp +chroma -me_range 16 -g 300 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -rc_eq "blurCplx^(1-qComp)" -qcomp 0.6 -qmin 10 -qmax 51 -qdiff 4 -coder 0 -refs 1 -bt $BITRATE -maxrate 4M -bufsize 4M -level 21  -r 30000/1001 -partitions +parti4x4+partp8x8+partb8x8 -me hex -subq 5 -f mp4 -aspect 480:270 -title "$TITLE" -acodec libfaac -ac 2 -ar 48000 -ab 128 -pass 1 "$TITLE.mp4"
 #Pass 2
