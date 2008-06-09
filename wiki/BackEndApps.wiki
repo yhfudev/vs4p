@@ -20,6 +20,10 @@ _  configuration: --prefix=/usr/local --libdir=${prefix}/lib --shlibdir=${prefix
 
 This setup does require quite a few dependencies, but most are available if you look around for them.
 
+I have a new fresh install box installed with Ubuntu.  I am taking notes on what I did to get ffmpeg installed and running for vs4p:
+
+I am following this link [http://ubuntuforums.org/showthread.php?t=786095 here] (from Ubuntu Forums)
+
 ==!AtomicParsley==
 
 [http://atomicparsley.sourceforge.net/ AtomicParsley home page]
