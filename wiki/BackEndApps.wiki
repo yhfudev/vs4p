@@ -60,6 +60,7 @@ sudo checkinstall
 }}}
 
 
+Check with the link to Ubuntu Forums for questions regarding updating and configuring ffmpeg on Ubuntu.
 
 
 ==!AtomicParsley==
