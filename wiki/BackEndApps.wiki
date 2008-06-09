@@ -24,6 +24,21 @@ I have a new fresh install box installed with Ubuntu.  I am taking notes on what
 
 I am following this link [http://ubuntuforums.org/showthread.php?t=786095 here] (from Ubuntu Forums)
 
+
+1. Install needed packages:
+
+2. Install yasm:
+{{{
+cd ~
+wget http://www.tortall.net/projects/yasm/releases/yasm-0.7.1.tar.gz
+tar xzvf yasm-0.7.1.tar.gz
+cd yasm-0.7.1
+./configure
+make
+sudo checkinstall
+}}}
+
+
 ==!AtomicParsley==
 
 [http://atomicparsley.sourceforge.net/ AtomicParsley home page]
