@@ -53,7 +53,7 @@ cd ~/
 svn checkout svn://svn.mplayerhq.hu/ffmpeg/trunk ffmpeg
 cd ffmpeg
 
-./configure --prefix=/usr/local --libdir=${prefix}/lib --shlibdir=${prefix}/lib  --enable-shared --enable-libmp3lame --enable-gpl --enable-libfaad --mandir=${prefix}/share/man --enable-libvorbis --enable-pthreads --enable-libfaac --enable-libxvid --enable-x11grab  --enable-libgsm --enable-libx264 --enable-liba52 --enable-libtheora --enable-nonfree
+./configure --prefix=/usr/local --libdir=${prefix}/lib --shlibdir=${prefix}/lib  --enable-shared --enable-libmp3lame --enable-gpl --enable-libfaad --mandir=${prefix}/share/man --enable-libvorbis --enable-pthreads --enable-libfaac --enable-libxvid --enable-x11grab  --enable-libgsm --enable-libx264 --enable-libtheora --enable-nonfree
 
 make
 sudo checkinstall
