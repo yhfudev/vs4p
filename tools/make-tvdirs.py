@@ -69,7 +69,7 @@ def main():
             t_info = s_info[1].split("-")
             number = str(t_info[0]).strip()
             title = str(t_info[1]).strip().replace(" ","_")
-            os.mkdir("./%s-%s-%s" % (str(tvshow), str(number), str(title)))
+            os.mkdir("./%s_-_%s_-_%s" % (str(tvshow), str(number), str(title)))
 
 if __name__ == "__main__":
     main()
